@@ -1,0 +1,4 @@
+[
+    { "id": "e1-2", "source": "card-1", "target": "card-2" },
+    { "id": "e1-3", "source": "card-1", "target": "card-3" }
+]

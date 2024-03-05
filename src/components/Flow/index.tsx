@@ -1,20 +1,28 @@
 import { useCallback } from 'react';
-import type { OnConnect } from 'reactflow';
+import type { Edge, Node, OnConnect } from 'reactflow';
 import ReactFlow, { Background, BackgroundVariant, addEdge, useEdgesState, useNodesState } from 'reactflow';
 import 'reactflow/dist/style.css';
 
-import initialNodes from './nodes.js';
-import initialEdges from './edges.js';
+import CardNode from './CardNode';
 
-function Flow() {
+const nodeTypes = { card: CardNode };
+
+function Flow({ nodes: initialNodes, edges: initialEdges }: { nodes: Node[]; edges: Edge[] }) {
     const [nodes, setNodes, onNodesChange] = useNodesState(initialNodes);
     const [edges, setEdges, onEdgesChange] = useEdgesState(initialEdges);
 
     const onConnect = useCallback<OnConnect>((connection) => setEdges((eds) => addEdge(connection, eds)), [setEdges]);
 
     return (
-        <ReactFlow nodes={nodes} edges={edges} onNodesChange={onNodesChange} onEdgesChange={onEdgesChange} onConnect={onConnect}>
-            <Background color="#ccc" variant={BackgroundVariant.Dots} />
+        <ReactFlow
+            nodeTypes={nodeTypes}
+            nodes={nodes}
+            edges={edges}
+            onNodesChange={onNodesChange}
+            onEdgesChange={onEdgesChange}
+            onConnect={onConnect}
+        >
+            <Background variant={BackgroundVariant.Dots} />
         </ReactFlow>
     );
 }

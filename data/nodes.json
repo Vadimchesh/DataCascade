@@ -1,0 +1,88 @@
+[
+    {
+        "id": "card-1",
+        "type": "card",
+        "data": {
+            "label": "Superset",
+            "description": "Dashboards",
+            "iconURL": "superset.svg",
+            "status": "running",
+            "options": [
+                [
+                    { "label": "Start", "action": "/start" },
+                    { "label": "Stop", "action": "/stop" }
+                ],
+                [
+                    { "label": "X-small", "action": "/x-small", "selected": true },
+                    { "label": "Small", "action": "/small" },
+                    { "label": "Medium", "action": "/medium" }
+                ]
+            ],
+            "handles": [
+                {
+                    "id": "a",
+                    "type": "target",
+                    "position": "top"
+                },
+                {
+                    "id": "b",
+                    "type": "source",
+                    "position": "bottom"
+                }
+            ]
+        },
+        "position": { "x": 150, "y": 0 }
+    },
+    {
+        "id": "card-2",
+        "type": "card",
+        "data": {
+            "label": "Node 2",
+            "description": "Dashboards",
+            "status": "stopped",
+            "options": [
+                { "label": "Start", "action": "/start" },
+                { "label": "Stop", "action": "/stop" }
+            ],
+            "handles": [
+                {
+                    "id": "a",
+                    "type": "target",
+                    "position": "top"
+                },
+                {
+                    "id": "b",
+                    "type": "source",
+                    "position": "bottom"
+                }
+            ]
+        },
+        "position": { "x": 0, "y": 150 }
+    },
+    {
+        "id": "card-3",
+        "type": "card",
+        "data": {
+            "label": "Node 3",
+            "description": "Dashboards",
+            "status": "disabled",
+            "options": [
+                { "label": "Start", "action": "/start" },
+                { "label": "Stop", "action": "/stop" }
+            ],
+            "handles": [
+                {
+                    "id": "a",
+                    "type": "target",
+                    "position": "top"
+                },
+                {
+                    "id": "b",
+                    "type": "source",
+                    "position": "bottom"
+                }
+            ]
+        },
+        "position": { "x": 300, "y": 150 }
+    }
+]
