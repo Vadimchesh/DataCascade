@@ -1,7 +1,158 @@
 [
     {
-        "id": "card-1",
+        "id": "group-0",
+        "type": "cardGroup",
+        "zIndex": -1,
+        "data": {
+            "label": "Enterprise Lakehouse Workspace",
+            "location": "us-west-2",
+            "status": "running",
+            "environment": [
+                { "label": "PROD", "selected": true },
+                { "label": "DEV", "selected": false }
+            ],
+            "handles": [
+                {
+                    "id": "a",
+                    "type": "source",
+                    "position": "right"
+                }
+            ]
+        },
+        "position": { "x": 100, "y": 100 }
+    },
+    {
+        "id": "card-0-0",
         "type": "card",
+        "parentNode": "group-0",
+        "extent": "parent",
+        "data": {
+            "label": "Azure",
+            "description": "Self-hosted",
+            "iconURL": "azure.svg",
+            "status": "running",
+            "options": [
+                [
+                    { "label": "Start", "action": "/start" },
+                    { "label": "Stop", "action": "/stop" }
+                ],
+                [
+                    { "label": "X-small", "action": "/x-small", "selected": true },
+                    { "label": "Small", "action": "/small" },
+                    { "label": "Medium", "action": "/medium" }
+                ]
+            ]
+        },
+        "position": { "x": 70, "y": 160 }
+    },
+    {
+        "id": "card-0-1",
+        "type": "card",
+        "parentNode": "group-0",
+        "extent": "parent",
+        "data": {
+            "label": "Azure",
+            "description": "Managed",
+            "iconURL": "azure.svg",
+            "status": "stopped",
+            "options": [
+                [
+                    { "label": "Start", "action": "/start" },
+                    { "label": "Stop", "action": "/stop" }
+                ],
+                [
+                    { "label": "X-small", "action": "/x-small", "selected": true },
+                    { "label": "Small", "action": "/small" },
+                    { "label": "Medium", "action": "/medium" }
+                ]
+            ]
+        },
+        "position": { "x": 70, "y": 270 }
+    },
+    {
+        "id": "group-1",
+        "type": "cardGroup",
+        "zIndex": -1,
+        "data": {
+            "label": "Environment infastructure",
+            "description": "Dashboards",
+            "status": "running",
+            "handles": [
+                {
+                    "id": "b",
+                    "type": "target",
+                    "position": "left"
+                },
+                {
+                    "id": "d",
+                    "type": "source",
+                    "position": "right"
+                }
+            ]
+        },
+        "position": { "x": 550, "y": 100 }
+    },
+    {
+        "id": "card-1-0",
+        "type": "card",
+        "parentNode": "group-1",
+        "extent": "parent",
+        "data": {
+            "label": "Blob Storage",
+            "status": "stopped",
+            "iconURL": "azure-blob-storage.svg",
+            "options": [
+                { "label": "Start", "action": "/start" },
+                { "label": "Stop", "action": "/stop" }
+            ]
+        },
+        "position": { "x": 80, "y": 170 }
+    },
+    {
+        "id": "group-2",
+        "type": "cardGroup",
+        "zIndex": -1,
+        "data": {
+            "groupSize": "large",
+            "label": "Cloud Services",
+            "status": "running",
+            "handles": [
+                {
+                    "id": "d",
+                    "type": "target",
+                    "position": "left"
+                },
+                {
+                    "id": "e",
+                    "type": "source",
+                    "position": "bottom"
+                }
+            ]
+        },
+        "position": { "x": 1000, "y": 100 }
+    },
+    {
+        "id": "card-2-0",
+        "type": "card",
+        "parentNode": "group-2",
+        "extent": "parent",
+        "data": {
+            "label": "Airflow",
+            "description": "Dashboards",
+            "status": "disabled",
+            "iconURL": "airflow.svg",
+            "options": [
+                { "label": "Start", "action": "/start" },
+                { "label": "Stop", "action": "/stop" }
+            ]
+        },
+        "position": { "x": 30, "y": 80 }
+    },
+    {
+        "id": "card-2-1",
+        "type": "card",
+        "parentNode": "group-2",
+        "extent": "parent",
         "data": {
             "label": "Superset",
             "description": "Dashboards",
@@ -17,72 +168,50 @@
                     { "label": "Small", "action": "/small" },
                     { "label": "Medium", "action": "/medium" }
                 ]
-            ],
-            "handles": [
-                {
-                    "id": "a",
-                    "type": "target",
-                    "position": "top"
-                },
-                {
-                    "id": "b",
-                    "type": "source",
-                    "position": "bottom"
-                }
             ]
         },
-        "position": { "x": 150, "y": 0 }
+        "position": { "x": 300, "y": 80 }
     },
     {
-        "id": "card-2",
+        "id": "card-2-2",
         "type": "card",
+        "parentNode": "group-2",
+        "extent": "parent",
         "data": {
-            "label": "Node 2",
-            "description": "Dashboards",
-            "status": "stopped",
+            "label": "Spark",
+            "iconURL": "spark.svg",
+            "status": "running",
             "options": [
-                { "label": "Start", "action": "/start" },
-                { "label": "Stop", "action": "/stop" }
-            ],
-            "handles": [
-                {
-                    "id": "a",
-                    "type": "target",
-                    "position": "top"
-                },
-                {
-                    "id": "b",
-                    "type": "source",
-                    "position": "bottom"
-                }
+                [
+                    { "label": "Start", "action": "/start" },
+                    { "label": "Stop", "action": "/stop" }
+                ],
+                [
+                    { "label": "X-small", "action": "/x-small", "selected": true },
+                    { "label": "Small", "action": "/small" },
+                    { "label": "Medium", "action": "/medium" }
+                ]
             ]
         },
-        "position": { "x": 0, "y": 150 }
+        "position": { "x": 180, "y": 230 }
     },
     {
-        "id": "card-3",
-        "type": "card",
+        "id": "group-3",
+        "type": "cardGroup",
+        "zIndex": -1,
         "data": {
-            "label": "Node 3",
-            "description": "Dashboards",
-            "status": "disabled",
-            "options": [
-                { "label": "Start", "action": "/start" },
-                { "label": "Stop", "action": "/stop" }
-            ],
+            "groupSize": "large",
+            "label": "Cosmos DB for PostgreSQL Database",
+            "location": "us-west-2",
+            "status": "running",
             "handles": [
                 {
-                    "id": "a",
+                    "id": "g",
                     "type": "target",
                     "position": "top"
-                },
-                {
-                    "id": "b",
-                    "type": "source",
-                    "position": "bottom"
                 }
             ]
         },
-        "position": { "x": 300, "y": 150 }
+        "position": { "x": 650, "y": 550 }
     }
 ]

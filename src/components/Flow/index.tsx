@@ -4,8 +4,9 @@ import ReactFlow, { Background, BackgroundVariant, addEdge, useEdgesState, useNo
 import 'reactflow/dist/style.css';
 
 import CardNode from './CardNode';
+import GroupNode from './GroupNode';
 
-const nodeTypes = { card: CardNode };
+const nodeTypes = { card: CardNode, cardGroup: GroupNode };
 
 function Flow({ nodes: initialNodes, edges: initialEdges }: { nodes: Node[]; edges: Edge[] }) {
     const [nodes, setNodes, onNodesChange] = useNodesState(initialNodes);
