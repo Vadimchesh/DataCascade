@@ -1,4 +1,5 @@
 import { NodeProps, Position } from 'reactflow';
+import { NodeDataOption } from '../CardNode/types';
 
 interface NodeDataHandle {
     id: string;
@@ -19,12 +20,14 @@ interface Hosting {
 }
 
 interface NodeData {
+    id: string;
     label: string;
     groupSize: 'default' | 'large';
     location?: string;
     hosting?: Hosting[];
     environment?: Environmnet[];
     handles?: NodeDataHandle[];
+    options?: NodeDataOption[] | [NodeDataOption[]];
 }
 
 export type GroupNodeProps = NodeProps<NodeData>;

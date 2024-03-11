@@ -127,6 +127,10 @@
                     "type": "source",
                     "position": "bottom"
                 }
+            ],
+            "options": [
+                { "label": "Start", "action": "/start" },
+                { "label": "Stop", "action": "/stop" }
             ]
         },
         "position": { "x": 1000, "y": 100 }
