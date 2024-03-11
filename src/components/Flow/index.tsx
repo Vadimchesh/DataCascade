@@ -9,7 +9,7 @@ import GroupNode from './GroupNode';
 const nodeTypes = { card: CardNode, cardGroup: GroupNode };
 
 function Flow({ nodes: initialNodes, edges: initialEdges }: { nodes: Node[]; edges: Edge[] }) {
-    const [nodes, setNodes, onNodesChange] = useNodesState(initialNodes);
+    const [nodes, _, onNodesChange] = useNodesState(initialNodes);
     const [edges, setEdges, onEdgesChange] = useEdgesState(initialEdges);
 
     const onConnect = useCallback<OnConnect>((connection) => setEdges((eds) => addEdge(connection, eds)), [setEdges]);
