@@ -99,7 +99,7 @@
         "extent": "parent",
         "data": {
             "label": "Blob Storage",
-            "status": "stopped",
+            "status": "pending",
             "iconURL": "azure-blob-storage.svg",
             "options": [
                 { "label": "Start", "action": "/start" },
