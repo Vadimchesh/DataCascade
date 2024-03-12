@@ -76,7 +76,7 @@
         "data": {
             "label": "Environment infastructure",
             "description": "Dashboards",
-            "status": "running",
+            "status": "pending",
             "handles": [
                 {
                     "id": "b",
@@ -142,7 +142,7 @@
         "extent": "parent",
         "data": {
             "label": "Airflow",
-            "description": "Dashboards",
+            "description": "Orchestration",
             "status": "disabled",
             "iconURL": "airflow.svg",
             "options": [
@@ -184,6 +184,7 @@
         "data": {
             "label": "Spark",
             "iconURL": "spark.svg",
+            "description": "Transformation",
             "status": "running",
             "options": [
                 [
@@ -207,7 +208,11 @@
             "groupSize": "large",
             "label": "Cosmos DB for PostgreSQL Database",
             "location": "us-west-2",
-            "status": "running",
+            "status": "stopped",
+            "options": [
+                { "label": "Start", "action": "/start" },
+                { "label": "Stop", "action": "/stop" }
+            ],
             "handles": [
                 {
                     "id": "g",

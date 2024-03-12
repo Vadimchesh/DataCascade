@@ -25,6 +25,7 @@ interface NodeData {
     groupSize: 'default' | 'large';
     location?: string;
     hosting?: Hosting[];
+    status: 'running' | 'stopped' | 'pending' | 'disabled';
     environment?: Environmnet[];
     handles?: NodeDataHandle[];
     options?: NodeDataOption[] | [NodeDataOption[]];
